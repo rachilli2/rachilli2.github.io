@@ -1,0 +1,243 @@
+/*Yes, this code is scuffed. Am I bothered to sort it out? No...*/
+@font-face {
+  src: url(fonts/MonumentExtended-Ultrabold.otf) format("opentype");
+  font-family: sequel;
+}
+@font-face {
+  src: url(fonts/Circular-Std-Book.ttf) format("truetype");
+  font-family: sans;
+}
+ 
+body{
+	background-color: #2D2D29;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	background-color:#1F1C1E;
+	height: 500px;
+	width: 500px;
+	margin: auto;
+	margin-top: 250px;
+	align-items: center;
+    justify-content: center;
+	border-radius: 70px;
+	z-index: -1;
+}
+
+.main img {
+	width: 190px;
+	height: 190px;
+	border-radius: 70px;
+	padding-bottom: 10px;
+	object-fit: cover;
+}
+
+.main h1 {
+	font-family: sequel;
+	font-size: 2.5em;
+	-webkit-text-stroke: #F8F0E3;
+    -webkit-text-stroke-width: 0.5px;
+    color: transparent;
+    letter-spacing: 1.5px;
+	padding: 0.675em 0.5em;
+    background-image: linear-gradient(
+    -225deg,
+    #1F1C1E 0%,
+    #1F1C1E 20%,
+    #F8F0E3 50%,
+	#1F1C1E 80%,
+	#1F1C1E 100%);
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: textclip 3s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.main h2 {
+	font-family: sans;
+	color: #F8F0E3;
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+.main h3 {
+	font-family: sans;
+	color: #F8F0E3;
+	font-size: 1em;
+	margin-top: 0;
+}
+
+.nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+.nav ul li{
+	display: inline-block;
+	line-height: 5em;
+	padding: 0.675em 0.5em;
+}
+
+.nav ul li a{
+	display: block;
+	position: relative;
+	text-align: center;
+	color: #F8F0E3;
+	font-size: 3em;
+	transition: color .2s ease-in;
+}
+
+.nav ul li a:hover{
+	color: #F85240;
+}
+
+.footer {
+	font-family: sans;
+	color: #F8F0E3;
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+}
+
+/*Code below is for elements involved with the loading animation.*/
+.leftbox {
+    z-index: 1;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #F8F0E3;
+    float:left;
+    position: absolute;
+    animation-name: moveleft;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	overflow: hidden;
+}
+.rightbox {
+	z-index: 1;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #F8F0E3;
+	float:right;
+	position: absolute;
+	animation-name: moveright;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.name{
+    font-family: sequel;
+	font-size: 2.5em;
+	-webkit-text-stroke: #2D2D29;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+    letter-spacing: 1.5px;
+}
+
+#forename{
+	z-index: 1;
+	position: absolute;
+    text-align: center;
+    top: -5%;
+	left: 50%;
+	margin-top: -48px;
+	margin-left: -209.74px;
+	animation-name: movefor;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+
+#surname{
+	z-index: 1;
+	position: absolute;
+    text-align: center;
+    top: 105%;
+	left: 50%;
+	margin-top: -48px;
+	margin-left: -140.525px;
+	animation-name: movesur;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+
+@keyframes movefor {
+    0% {top: -5%;}
+	30% {color: transparent;}
+	40% {top: 46%;
+	left: 50%;
+	-webkit-transform: rotate(0);}
+	45% {color: #2D2D29;}
+	50% {top: 46%;
+	left: 50%;
+	-webkit-transform: rotate(0);}
+    60% {top: 46%;
+	left: 50%;
+	transform-origin: bottom center;
+	-webkit-transform: rotate(-90deg);}
+	100% {top: 46%;
+	left: -50%;
+	transform-origin: bottom center;
+    -webkit-transform: rotate(-90deg);
+	color: #2D2D29;}
+}
+
+@keyframes movesur {
+    0% {top: 105%;}
+	30% {color: transparent;}
+	40% {top: 54%;
+	left: 50%;
+	-webkit-transform: rotate(0);}
+	45% {color: #2D2D29;}
+	50% {top: 54%;
+	left: 50%;
+	-webkit-transform: rotate(0);}
+    60% {top: 54%;
+	left: 50%;
+	transform-origin: top center;
+	-webkit-transform: rotate(-90deg);}
+	100% {top: 54%;
+	left: 150%;
+	transform-origin: top center;
+	-webkit-transform: rotate(-90deg);
+	color: #2D2D29;}
+}
+
+@keyframes moveleft {
+	0% {left: 0%;}
+	60% {left: 0%;}
+    100% {left: -50%;}
+}
+
+@keyframes moveright {
+	0% {right: 0%;}
+	60% {right: 0%;}
+    100% {right: -50%;}
+}
+/*Future edits: Maybe an animation following the mouse cursor.*/

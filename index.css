@@ -234,12 +234,15 @@ body{
 @keyframes moveleft {
 	0% {left: 0%;}
 	60% {left: 0%;}
-    100% {left: -50%;}
+    100% {left: -50%;
+	visibility: hidden;}
 }
 
 @keyframes moveright {
 	0% {right: 0%;}
 	60% {right: 0%;}
-    100% {right: -50%;}
+    100% {right: -50%;
+	visibility: hidden;}
 }
-/*Future edits: Maybe an animation following the mouse cursor.*/
+/*Future edits: Maybe an animation following the mouse cursor.
+fix for mobile screens*/

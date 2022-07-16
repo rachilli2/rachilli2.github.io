@@ -244,5 +244,55 @@ body{
     100% {right: -50%;
 	visibility: hidden;}
 }
+
+@media(max-width: 480px){
+	
+	.main{
+		height: 300px;
+		width: 300px;
+		margin: -150px 0 0 -150px;		
+	}
+	
+	.main img {
+		width: 130px;
+		height: 140px;
+		object-fit: cover;
+	}
+
+	.main h1 {
+		font-size: 1.5em;
+	}
+	
+	.main h2 {
+		font-size: 1em;
+	}
+	
+	.main h3 {
+		font-size: 0.75em;
+	}
+	
+	.nav ul li {
+		line-height: 1em;
+	}
+	
+	.nav ul li a{
+		font-size: 2em;
+	}
+	
+	.name{
+		font-size: 1.5em;
+	}
+	
+	#forename{
+		margin-top: -57px;
+		margin-left: -127.65px;
+	}
+	
+	#surname{
+		margin-top: -57px;
+		margin-left: -85.515px;
+	}
+
+}
 /*Future edits: Maybe an animation following the mouse cursor.
 fix for mobile screens*/

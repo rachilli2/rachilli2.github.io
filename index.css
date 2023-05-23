@@ -483,7 +483,6 @@ body{
 	.main{
 		height: 300px;
 		width: 300px;
-		/*margin: -150px 0 0 -150px;	*/	
 	}
 	
 	.main img {
@@ -516,7 +515,6 @@ body{
 	.name{
 		font-size: 1.5em;
 	}
-/*edit from here */	
 
 	.title{
 		/*margin-top: 14.7rem;*/
@@ -559,7 +557,10 @@ body{
 		font-size: 1em;
 	}
 	
-/*Future edits: Fix for mobile screens*/
+	.footer {
+		width: 60%;
+	}
+	
 	
 	#forename{
 		margin-top: -57px;

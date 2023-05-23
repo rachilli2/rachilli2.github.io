@@ -476,14 +476,14 @@ body{
 @media screen and (max-width: 480px){
 	
 	body, html{
-		overflow-x: hidden;
-		overflow-y: hidden;
+		overflow-x: visible;
+		overflow-y: visible;
 	}
 	
 	.main{
 		height: 300px;
 		width: 300px;
-		margin: -150px 0 0 -150px;		
+		/*margin: -150px 0 0 -150px;	*/	
 	}
 	
 	.main img {
@@ -509,16 +509,57 @@ body{
 	}
 	
 	.nav ul li a{
-		font-size: 2em;
+		font-size: 1.25em;
 	}
 	
-	.footer{
-		position: absolute;
-	}
 	
 	.name{
 		font-size: 1.5em;
 	}
+/*edit from here */	
+
+	.title{
+		/*margin-top: 14.7rem;*/
+		font-size: 1em;
+	}
+	
+	.technologies {
+		height: 70em;
+		width: 25em;
+	}
+
+	.technologies h3 {
+		font-size: 1em;
+	}
+
+	.technologytile {
+		height: 5rem;
+		width: 10rem;
+	}
+
+	#icon{
+		font-size: 3em;
+	}
+
+	#customicon{
+		width: 50px;
+		height: 50px;
+	}
+	
+	.projects {
+		max-width: 25rem;
+	}
+
+	.item {
+		height: 20rem;
+		width: 40rem;
+	}
+	
+	.text {
+		font-size: 1em;
+	}
+	
+/*Future edits: Fix for mobile screens*/
 	
 	#forename{
 		margin-top: -57px;
@@ -531,4 +572,3 @@ body{
 	}
 
 }
-/*Future edits: Fix for mobile screens*/
